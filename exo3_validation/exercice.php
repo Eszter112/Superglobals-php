@@ -5,7 +5,7 @@ o email valide.
 o age entier positif.
 • Afficher erreurs sinon valeurs -->
 
-<form method="get">
+<form method="post">
 
     Nom: <input type="text" name="nom">
     Email: <input type="email" name="email">
@@ -21,14 +21,14 @@ o age entier positif.
 
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') { //'REQUEST_METHOD'  Méthode de requête utilisée pour accéder à la page ; par exemple GET, HEAD, POST, PUT.
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { //'REQUEST_METHOD'  Méthode de requête utilisée pour accéder à la page ; par exemple GET, HEAD, POST, PUT.
 
 
-    $nom = $_GET['nom'];
+    $nom = $_POST['nom'];
 
-    $email = $_GET['email'];
+    $email = $_POST['email'];
 
-    $age = $_GET['age'];
+    $age = $_POST['age'];
 
 
     if (empty($nom)) {
