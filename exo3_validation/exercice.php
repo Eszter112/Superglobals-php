@@ -49,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //'REQUEST_METHOD'  Méthode de req
 
     if (empty($age)) {
         echo "Erreur : age vide ";
-    } elseif ($age <= 0  && filter_var($age, FILTER_VALIDATE_INT)) {
+    } elseif ($age <= 0  && filter_var($age, FILTER_VALIDATE_INT)) { //
         echo "Entrez age entier positif";
     } else {
-        echo "Email valide: " . htmlspecialchars($age);
+        echo "Age valide: " . htmlspecialchars($age);
     }
 }
