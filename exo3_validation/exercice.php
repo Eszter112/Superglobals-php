@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //'REQUEST_METHOD'  Méthode de req
 
     if (empty($nom)) {
         echo "Erreur : nom vide";
+    } else {
+        echo "Votre nom est: " . htmlspecialchars($nom) . "<br>";
     }
 
 
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //'REQUEST_METHOD'  Méthode de req
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {  //filter_var: permet de verifier (valider) ou de nettoyer des donnees 
         echo "Erreur : email invalide.";
     } else {
-        echo "Email valide: " . htmlspecialchars($email);
+        echo "Email : " . htmlspecialchars($email) . "<br>";
     }
 
 
@@ -52,6 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //'REQUEST_METHOD'  Méthode de req
     } elseif ($age <= 0  && filter_var($age, FILTER_VALIDATE_INT)) { //
         echo "Entrez age entier positif";
     } else {
-        echo "Age valide: " . htmlspecialchars($age);
+        echo "Age : " . htmlspecialchars($age);
     }
 }
