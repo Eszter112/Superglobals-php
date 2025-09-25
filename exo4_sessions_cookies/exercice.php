@@ -31,9 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-
-
-
 if (isset($_COOKIE['last_visit'])) {
     echo "Dernier visite : " . $_COOKIE['last_visit'];
 }
